@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bingo Grid</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-mark">BG</a>
+      <div>
+        <div class="eyebrow">Bingo Grid</div>
+        <div class="brand-title">Sports Predictions</div>
+      </div>
+    </div>
+
+    <nav class="top-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="formula1.html" class="nav-link">Formula 1</a>
+      <a href="premierleague.html" class="nav-link">Premier League</a>
+      <a href="championsleague.html" class="nav-link">Champions League</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero home-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Sports bingo platform</div>
+        <h1>Choose your arena</h1>
+        <p>
+          Players sign in, choose a competition, create prediction bingo entries,
+          and verify what actually happened after the event ends.
+        </p>
+      </div>
+
+      <div class="login-card">
+        <div class="eyebrow">Sign in</div>
+        <h2>Continue with Google</h2>
+        <p>
+          Use Google sign-in to access your predictions, competitions, and saved bingo entries.
+        </p>
+
+        <button id="googleSignInBtn" class="google-btn" type="button">
+          <span class="google-icon">G</span>
+          Continue with Google
+        </button>
+
+        <p class="small-note">
+          Replace the Google client ID in <code>app.js</code> to activate real sign-in.
+        </p>
+
+        <div id="authStatus" class="auth-status"></div>
+      </div>
+    </section>
+
+    <section class="selector-grid">
+      <a class="selector-card f1-card" href="formula1.html">
+        <div class="card-top">
+          <div class="logo-box">
+            <img
+              src="https://cdn.simpleicons.org/formula1/E10600"
+              alt="Formula 1"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <span class="logo-fallback">F1</span>
+          </div>
+          <span class="card-tag">Open page</span>
+        </div>
+        <div class="eyebrow">Race by race</div>
+        <h3>Formula 1</h3>
+        <p>Choose a Grand Prix and register 5 bingo predictions for that race weekend.</p>
+      </a>
+
+      <a class="selector-card pl-card" href="premierleague.html">
+        <div class="card-top">
+          <div class="logo-box dark">
+            <img
+              src="https://cdn.simpleicons.org/premierleague/FFFFFF"
+              alt="Premier League"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <span class="logo-fallback light">PL</span>
+          </div>
+          <span class="card-tag">Open page</span>
+        </div>
+        <div class="eyebrow">Gameweek by gameweek</div>
+        <h3>Premier League</h3>
+        <p>Choose a gameweek and register 5 bingo predictions across that round of fixtures.</p>
+      </a>
+
+      <a class="selector-card ucl-card" href="championsleague.html">
+        <div class="card-top">
+          <div class="logo-box">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d8/UEFA_Champions_League_logo.svg"
+              alt="Champions League"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <span class="logo-fallback">UCL</span>
+          </div>
+          <span class="card-tag">Open page</span>
+        </div>
+        <div class="eyebrow">Knockout stage</div>
+        <h3>Champions League</h3>
+        <p>Register 10 predictions for the whole remaining knockout stage.</p>
+      </a>
+    </section>
+  </main>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="app.js"></script>
+</body>
+</html>
